@@ -10,3 +10,6 @@ git√‹¬Î£∫lichangting123
 
 ‘∂≥Ã≤÷ø‚url£∫
 url = git@github.com:CheteLee/blrz.git
+
+
+github‘∂≥Ã≤÷ø‚µÿ÷∑£∫https://github.com/CheteLee/blrz.git
