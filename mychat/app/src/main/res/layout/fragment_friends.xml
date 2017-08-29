@@ -3,49 +3,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
-<!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center_horizontal"-->
-    <!--android:layout_centerInParent="true"-->
-    <!--android:gravity="center"-->
-    <!--android:text="FRIENDS"/>-->
-    <!--<ListView-->
-        <!--android:id="@+id/lv_friends"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
 
-    <!--</ListView>-->
-    <RadioGroup
-        android:id="@+id/rg_child_bottom"
+    <!--<RadioGroup-->
+        <!--android:id="@+id/rg_child_bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentTop="true">-->
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_child_friends"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="friends"-->
+            <!--android:layout_weight="1"/>-->
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_child_devices"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="devices"-->
+            <!--android:layout_weight="1"/>-->
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_child_groups"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="group"-->
+            <!--android:layout_weight="1"/>-->
+    <!--</RadioGroup>-->
+    <ScrollView
+        android:id="@+id/sv_indicator"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:orientation="horizontal"
-        android:layout_alignParentTop="true">
-        <RadioButton
-            android:id="@+id/rb_child_friends"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:id="@+id/ll_content"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="friends"
-            android:layout_weight="1"/>
-        <RadioButton
-            android:id="@+id/rb_child_devices"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="devices"
-            android:layout_weight="1"/>
-        <RadioButton
-            android:id="@+id/rb_child_groups"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="group"
-            android:layout_weight="1"/>
-    </RadioGroup>
+            android:layout_height="45dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_content_top"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_indicateid"
+                android:layout_width="95dp"
+                android:layout_height="3dp"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+    </ScrollView>
     <RelativeLayout
         android:id="@+id/rl_child_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rg_child_bottom"
+        android:layout_below="@+id/sv_indicator"
         android:background="#ff5565">
 
     </RelativeLayout>
