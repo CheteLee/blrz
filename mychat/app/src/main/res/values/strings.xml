@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">mychat</string>
+    <string name="title_bt_back">返回</string>
+    <string name="title_bt_menu">菜单</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置填充颜色  -->
+    <solid android:color="#90000000"/>
+    <!-- 设置几何形状绘制边框 红色边框 -->
+    <stroke
+        android:color="#444242"
+        android:width="2dp"
+        />
+    <!--设置四个角的弧度-->
+    <corners
+        android:topLeftRadius="8dp"
+        android:topRightRadius="8dp"
+        android:bottomRightRadius="8dp"
+        android:bottomLeftRadius="8dp"/>
+</shape>
