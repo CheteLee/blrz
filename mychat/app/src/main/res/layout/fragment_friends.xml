@@ -29,40 +29,56 @@
             <!--android:text="group"-->
             <!--android:layout_weight="1"/>-->
     <!--</RadioGroup>-->
-    <ScrollView
+
+    <!--<ScrollView-->
+        <!--android:id="@+id/sv_indicator"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:fillViewport="true"-->
+        <!--&gt;-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:orientation="vertical">-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_content_top"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical">-->
+
+            <!--</LinearLayout>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_indicateid"-->
+                <!--android:layout_width="95dp"-->
+                <!--android:layout_height="3dp"-->
+                <!--android:background="@color/colorPrimary"/>-->
+
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_child_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/sv_indicator"-->
+        <!--android:background="#ff5565">-->
+
+    <!--</RelativeLayout>-->
+    <com.ctlee.mychat.indicator.TabStrip
         android:id="@+id/sv_indicator"
         android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:orientation="horizontal"
-        android:fillViewport="true"
-        >
-        <LinearLayout
-            android:id="@+id/ll_content"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/ll_content_top"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+        android:layout_height="48dp"
+        android:background="#ffffff">
 
-            </LinearLayout>
-            <TextView
-                android:id="@+id/tv_indicateid"
-                android:layout_width="95dp"
-                android:layout_height="3dp"
-                android:background="@color/colorPrimary"/>
-
-        </LinearLayout>
-    </ScrollView>
-    <RelativeLayout
-        android:id="@+id/rl_child_container"
+    </com.ctlee.mychat.indicator.TabStrip>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_child_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/sv_indicator"
-        android:background="#ff5565">
+        android:background="#ff5565"
+        android:layout_below="@+id/sv_indicator">
 
-    </RelativeLayout>
+    </android.support.v4.view.ViewPager>
 </RelativeLayout>

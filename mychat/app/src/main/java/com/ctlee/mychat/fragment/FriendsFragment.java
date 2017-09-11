@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.ctlee.mychat.R;
+import com.ctlee.mychat.indicator.TabStrip;
 
 /**
  * Created by ctLee on 2017/8/11.
@@ -30,6 +32,9 @@ public class FriendsFragment extends Fragment {
     private RadioButton rb_child_devices;
     private RadioButton rb_child_groups;
 
+    private ViewPager vp_child_container;
+    private TabStrip sv_indicator;
+
 
     @Nullable
     @Override
@@ -41,10 +46,16 @@ public class FriendsFragment extends Fragment {
         return view;
     }
     public void findviews(){
-        rg_child_top = (RadioGroup) view.findViewById(R.id.rg_child_bottom);
-        rb_child_friends = (RadioButton) view.findViewById(R.id.rb_child_friends);
-        rb_child_devices = (RadioButton) view.findViewById(R.id.rb_child_devices);
-        rb_child_groups = (RadioButton) view.findViewById(R.id.rb_child_groups);
+//        rg_child_top = (RadioGroup) view.findViewById(R.id.rg_child_bottom);
+//        rb_child_friends = (RadioButton) view.findViewById(R.id.rb_child_friends);
+//        rb_child_devices = (RadioButton) view.findViewById(R.id.rb_child_devices);
+//        rb_child_groups = (RadioButton) view.findViewById(R.id.rb_child_groups);
+
+        vp_child_container = (ViewPager) view.findViewById(R.id.vp_child_container);
+        sv_indicator = (TabStrip) view.findViewById(R.id.sv_indicator);
+        pageAdapter=newFragmentPageAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(pageAdapter);
+        tabStrip.setViewPager(viewPager);
     }
 
     public void setListener(){
