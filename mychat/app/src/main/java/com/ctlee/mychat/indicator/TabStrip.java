@@ -206,7 +206,7 @@ public class TabStrip extends HorizontalScrollView {
      * 设置viewpager
      * @param viewPager
      */
-    private void setViewPager(ViewPager viewPager){
+    public void setViewPager(ViewPager viewPager){
         this.viewPager = viewPager;
         if(pagerAdapter == null){
             throw new IllegalStateException("ViewPager does not has a adapter instance.");
